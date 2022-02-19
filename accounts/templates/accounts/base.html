@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,200;1,300&family=MonteCarlo&family=Oswald:wght@200&family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+   
+    {% block css %} {% endblock %}
+
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark " style="font-family: 'Barlow Condensed', sans-serif; font-size: 1.125rem;">
+        <div class="container-fluid">
+          <!--nav brand-->
+            <a href="{% url 'accounts:home' %}" class="navbar-brand">Home</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collaspe navbar-collapse" id="navbarSupportedContent">
+
+              <ul class="navbar-nav ms-auto">
+                
+                <li class="nav-item dropdown" style="font-family:'Roboto Condensed', sans-serif;">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="{% url 'accounts:login' %}">Login</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="{% url 'accounts:register' %}">Create User</a></li>
+                  </ul>
+                </li>      
+
+                <li class="nav-item">
+                  <a href="{% url 'accounts:login' %}" class="nav-link active">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'accounts:logout' %}" class="nav-link">Logout</a>
+                </li>
+                <li class="nav-item ">
+                  <a href="{% url 'accounts:register' %}" class="nav-link ">Create user</a>
+                </li>
+             
+              </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+  <!--Body-->
+  {% block body %} {% endblock %}
+  
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    {% block js %} {% endblock %}
+  </body>
+</html>

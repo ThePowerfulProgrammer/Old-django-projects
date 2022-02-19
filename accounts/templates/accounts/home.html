@@ -1,0 +1,105 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block css %}<!--
+<link rel="stylesheet" href="{% static 'LOGIN/home.css'  %}" type="text/css"/> -->
+{% endblock %}
+
+
+{% block body %}
+
+
+<div class="container-fluid">
+
+    <div class="jumbotron p-2 mt-2 text-white bg-dark rounded ">
+        <h1 class="Title">THE POWERFUL</h1>
+        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum officia soluta veritatis. Quasi fugiat deleniti sunt repellat ut? Quibusdam, recusandae explicabo exercitationem nemo incidunt ducimus, at blanditiis quidem corporis, omnis quod architecto voluptates corrupti mollitia aperiam quaerat distinctio ipsa inventore in. Veritatis, sint praesentium saepe atque, voluptatem non labore corrupti perspiciatis reprehenderit ea odio illo doloribus porro voluptatum molestiae mollitia sed quam expedita vel quibusdam minima! Quae nam officiis quod quo voluptatem aperiam qui recusandae velit laudantium, dolorem deleniti quaerat debitis, laboriosam repudiandae iusto? Suscipit maxime corrupti molestiae molestias nulla ratione quas cum laborum amet, temporibus nisi quos cupiditate?</p>
+        <p class="lead">
+            <a href="#" class="btn btn-info btn-md" role="button">To about</a>
+        </p>
+
+        <blockquote class="blockquote ">
+            <p class="mb-2">Only the dead have seen the end of war.</p>
+            <footer class="blockquote-footer">Athenian philosopher during the Classical period in Ancient Greece. <cite title="Plato">Plato</cite></footer>
+        </blockquote>
+    </div>
+
+
+
+    
+
+    <footer class="bg-dark text-center text-white mb-3 rounded">
+        <div class="container p-4">
+         <!-- Section: Form -->
+         <section class="">
+           <form action="#">
+             <!--Grid row-->
+             <div class="row d-flex justify-content-center">
+               <!--Grid column-->
+               <div class="col-auto">
+                 <p class="pt-2">
+                   <strong>Subscribe up for our email service</strong>
+                 </p>
+               </div>
+               <!--Grid column-->
+   
+               <!--Grid column-->
+               <div class="col-md-5 col-12">
+                 <!-- Email input -->
+                 <div class="form-outline form-white mb-4">
+                   <input type="email" id="form5Example2" class="form-control" placeholder="johndoe@example.com">
+                   <label class="form-label" for="form5Example2"></label>
+                 </div>
+               </div>
+               <!--Grid column-->
+   
+               <!--Grid column-->
+               <div class="col-auto">
+                 <!-- Submit button -->
+                 <button type="submit" class="btn btn-outline-light mb-4">
+                   Subscribe
+                 </button>
+               </div>
+               <!--Grid column-->
+             </div>
+             <!--Grid row-->
+           </form>
+         </section>
+         <!-- Section: Form -->
+   
+         <!-- Section: Text -->
+         <section class="mb-4">
+           <p class="footer_text">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+             repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+             eum harum corrupti dicta, aliquam sequi voluptate quas.
+           </p>
+           <p class="footer__contributions">© ThePowerful Programmer</p>
+
+         </section> 
+          
+        </div>
+        
+    </footer>
+
+    {% if message %}
+      <div class="container-fluid">
+        <h1 class="mt-5 display-2 text-center">{{ message }}</h1>
+      </div>
+    {% endif %}
+    
+
+
+
+    
+
+</div>
+
+
+
+
+    {% block js %}{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block title %} Discover Page {% endblock %}
+
+{% block css %}<!--
+<link rel="stylesheet" href="{% static 'LOGIN/home.css'  %}" type="text/css"/> -->
+{% endblock %}
+
+
+{% block body %}
+
+{% for i in movie %}
+<div class="container border border-dark my-5">
+    <p class="lead my-5">{{ i }}</p>
+</div>
+{% endfor %}
+
+
+    {% block js %}{% endblock %}
+{% endblock %}

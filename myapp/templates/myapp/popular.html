@@ -1,0 +1,18 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block title %} Popular Page {% endblock %}
+
+{% block css %}<!--
+<link rel="stylesheet" href="{% static 'LOGIN/home.css'  %}" type="text/css"/> -->
+{% endblock %}
+
+
+{% block body %}
+<div class="container my-5 border border-dark">
+    {% for i in data %}
+        <p class="lead">{{ i }}</p>
+    {% endfor %}
+</div>
+    {% block js %}{% endblock %}
+{% endblock %}

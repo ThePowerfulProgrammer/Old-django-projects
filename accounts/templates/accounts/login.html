@@ -1,0 +1,48 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block title %} Login {% endblock %}
+
+{% block css %}
+<!--
+<link rel="stylesheet" type="text/css" href="{% static 'accounts/login.css' %}">-->
+{% endblock %}
+
+
+{% block body %}
+
+
+
+
+<div class="container mt-5 ">
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12">
+
+            <div class="card border border-dark mb-sm-3">
+                <div class="card-body">
+                    
+                    <form action="{% url 'accounts:login' %}" method="POST" class="mt-5">{% csrf_token %}
+                        
+                        <div class="container">
+                            <h1 class="display-2 mt-0">LOGIN </h1>
+                            {{ form.as_p }}
+                        
+                        <input type="submit" value="Login" class="btn btn-info">
+                        <p class="card-text mt-2">Enter registered username and password</p>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    {% block js %}{% endblock %}
+
+{% endblock %}

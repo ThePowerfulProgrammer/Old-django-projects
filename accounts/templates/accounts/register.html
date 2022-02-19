@@ -1,0 +1,49 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block title %} Register {% endblock %}
+
+{% block css %}
+<!--
+<link rel="stylesheet" type="text/css" href="{% static 'accounts/register.css' %}">-->
+{% endblock %}
+
+
+{% block body %}
+
+
+
+<div class="container mt-5 mb-3">
+
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12">
+            
+            <div class="card border border-dark rounded">
+                <div class="card-body mt-0">
+
+                    <form  method="POST" class="mt-5">{% csrf_token %}
+                        <div class="container">
+                            <hi class="display-2">Register New Users</hi>
+                        
+                            {{ form.as_p }}
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo omnis nisi commodi aperiam, optio sunt! Explicabo eius nam repellendus atque quod? Delectus voluptatibus natus atque temporibus porro itaque nulla dolore.</p>
+                        <input type="submit" value="Register" class="btn btn-info">
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+    {% block js %}{% endblock %}
+
+{% endblock %}
